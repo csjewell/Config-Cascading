@@ -1,0 +1,41 @@
+verbose = %f:%l:%c:\n %p: %m\n
+theme = (core || more) && !deprecated
+
+[ControlStructures::ProhibitPostfixControls]
+flowcontrol = warn die carp croak cluck confess goto exit throw return next
+
+[RegularExpressions::RequireExtendedFormatting]
+minimum_regex_length_to_complain_about = 7
+
+[InputOutput::RequireCheckedSyscalls]
+functions = :builtins
+exclude_functions = print
+
+[Modules::PerlMinimumVersion]
+version = 5.006001
+
+[ValuesAndExpressions::ProhibitMagicNumbers]
+allowed_values = -1 0 1 2
+
+[Documentation::PodSpelling]
+stop_words_file = xt/settings/stopwords.txt
+
+# Exclusions
+
+# I like to set up my own pod.
+[-Documentation::RequirePodAtEnd]
+[-Documentation::RequirePodSections]
+
+# No Emacs!
+[-Editor::RequireEmacsFileVariables]
+
+# Lightweight...
+[-ErrorHandling::RequireCarping]
+[-ErrorHandling::RequireUseOfExceptions]
+
+# We're stuck with one.
+[-Variables::ProhibitPackageVars]
+
+# We have an import routine...
+[-Subroutines::RequireArgUnpacking]
+[-TestingAndDebugging::ProhibitNoStrict]

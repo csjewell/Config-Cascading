@@ -1,0 +1,15 @@
+Config-Cascading*
+blib
+.build
+_build
+Build
+Build.bat
+LICENSE
+README
+MANIFEST
+Makefile.PL
+META.yml
+MYMETA.yml
+META.json
+MYMETA.json
+*.bak
